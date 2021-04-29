@@ -1,0 +1,28 @@
+header {
+
+  align-items: center;
+  border-bottom: 1px solid #f2d27b;
+}
+img{
+  display: inline-block;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: -2.5rem;
+}
+
+li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+ul:last-child {
+  margin-right: 2rem;
+  margin-top: -1.5rem;
+}
+
+@media (max-width: 756px) {
+  header {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+}

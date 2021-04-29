@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    align-items: center;
+  }
+  
+  #search-bar {
+    width: 80%;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: initial;
+    text-align: center;
+    border-radius: 50px;
+  }

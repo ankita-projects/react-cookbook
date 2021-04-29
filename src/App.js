@@ -1,26 +1,27 @@
-import React, { Component } from "react";
+
 import "./App.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import { BrowserRouter as Router } from "react-router-dom";
+import React, { Component } from 'react'
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import Home from "./Components/Main/Home";
+import Footer from "./Components/Footer/Footer";
 
 
-function App() {
+class App extends Component {
+  getRecipe = (event) => {
+    event.preventDefault();
+      console.log("working");
+  }
+ render(){
   return (
-      <div className="App">
-        <Header date = {today.toDateString()} />
-        <main>
-          <div className ={circleClass}>{this.state.counter}</div>
-          <button onClick ={this.addHandler} className ="add">Add one
-          </button>
-          <button onClick ={this.removeHandler} className ="remove">Remove one
-          </button>
-           <button onClick ={this.resetHandler} className ="reset">Reset
-          </button>
-        </main>
-        <Footer year={today.getFullYear()} />
-      </div>
-     );
-  
+    <Router>
+      <Header />
+      <Main />
+      <Footer />
+     </Router>
+  );
+}
 }
 
 export default App;

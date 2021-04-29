@@ -1,13 +1,78 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #23242a;
+  color: #eaeff0;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+p {
+  max-width: 65ch;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+p,
+a {
+  font-size: 1.375rem;
+}
+
+a {
+  color: #eb892e;
+
+}
+
+button {
+  font-size: initial;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background-color: #f8f4ea;
+  color: #23242a;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+img {
+  width:80px;
+}
+
+:focus {
+  outline: 2px solid #eaeff0;
+  outline-offset: 5px;
+}
+
+input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+  box-shadow: 0px 0px 0px 5px #23242a, 0px 0px 0px 7px #eaeff0;
+}
+
+@media (max-width: 756px) {
+  html {
+    font-size: 13px;
+  }
 }

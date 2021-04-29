@@ -1,0 +1,14 @@
+.container {
+    padding-bottom: 5.8rem;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 75vh;
+  }
+  
+  .container * + * {
+    margin-top: 2rem;
+  }
+  
+  .buttons {
+    margin-top: 0;
+  }
