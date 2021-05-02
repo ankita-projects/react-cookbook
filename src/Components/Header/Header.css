@@ -1,9 +1,8 @@
 header {
-
   align-items: center;
   border-bottom: 1px solid #f2d27b;
 }
-img{
+img {
   display: inline-block;
   width: 200px;
   margin: 0 auto;
@@ -12,17 +11,10 @@ img{
 
 li {
   display: inline-block;
-  margin-left: 2rem;
+  margin-left: 2.5rem;
 }
 
-ul:last-child {
-  margin-right: 2rem;
-  margin-top: -1.5rem;
-}
+ul {
+  margin-right: 2.2rem;
 
-@media (max-width: 756px) {
-  header {
-    flex-direction: column;
-    padding-bottom: 2rem;
-  }
 }

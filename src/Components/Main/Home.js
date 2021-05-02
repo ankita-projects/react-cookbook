@@ -6,7 +6,7 @@ const Home = (props) => (
     <form onSubmit={props.getRecipe}>
       <div
         style={{
-          backgroundImage: `url("https://indianrestaurantmadeira.com/assets/img/background-tajmahal.jpg")`,
+          backgroundImage: `url("https://www.hoteliermiddleeast.com/public/images/2018/10/26/Khyber5.jpg")`,
           backgroundRepeat: "no-repeat",
           height: "90vh",
           width: "215vh",

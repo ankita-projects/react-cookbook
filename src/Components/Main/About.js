@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-class About extends Component {
-  render() {
+const About = () => {
+
     return (
       <div className="container">
         <h1>Indian Cuisine</h1>
@@ -15,6 +15,6 @@ class About extends Component {
       </div>
     );
   }
-}
+
 
 export default About;
