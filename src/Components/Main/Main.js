@@ -9,10 +9,10 @@ import About from "./About";
 const Main = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3002/recipes")
+    fetch("http://127.0.0.1:8000/recipies")
       .then((response) => response.json())
       .then((data) => {
-        setRecipes(data);
+        setRecipes(data.recipes);
       });
   }, []);
 

@@ -13,6 +13,9 @@ class Nav extends Component {
             <NavLink to="./recipes">Recipes</NavLink>
           </li>
           <li>
+            <NavLink to="./addRecipes">Add Recipes</NavLink>
+          </li>
+          <li>
             <NavLink to="./about">About</NavLink>
           </li>
         </ul>
