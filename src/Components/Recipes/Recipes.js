@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import RecipesCard from "./RecipesCard";
 
 const Recipes = ({recipesList}) => {
-  console.log("dfgdfgdfgdfg  fdghdfhdfh")
+  
   console.log(recipesList)
 
   return (
