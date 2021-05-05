@@ -5,6 +5,7 @@ import "./Main.css";
 import Home from "./Home";
 import Recipes from "../Recipes/Recipes";
 import About from "./About";
+import RecipesForm from "../Recipes/RecipesForm";
 
 const Main = () => {
   const [recipes, setRecipes] = useState([]);
@@ -22,6 +23,9 @@ const Main = () => {
         <Route exact path="/" component={Home} />
         <Route path="/recipes">
           <Recipes recipesList={recipes} />
+        </Route>
+        <Route path="/addRecipes">
+          <RecipesForm />
         </Route>
         <Route path="/about" component={About} />
       </Switch>
