@@ -6,6 +6,26 @@
 body{
   background: rgb(2,0,36);
   width: 100%;
+ 
+}
+a {
+  color: #eb892e;
+}
+a:hover{
+  color: #f1e3d5;
+}
+.card{
+  position: relative;
+  margin:2rem;
+  height:500px;
+}
+.card-img-top{
+  position: relative;
+  height: 250px;
+  top:2rem;
+}
+.posts{
+  display:flex;
 }
 header,
 footer{

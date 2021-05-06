@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import RecipesCard from "./RecipesCard";
-import RecipesForm from "./RecipesForm";
+
 
 const Recipes = ({recipesList}) => {
   
@@ -8,7 +8,7 @@ const Recipes = ({recipesList}) => {
 
   return (
     <div className="posts">
-      <RecipesForm/>
+ 
       {recipesList.map((a) => (
         <RecipesCard
           key={a.id}

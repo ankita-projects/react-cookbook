@@ -14,6 +14,7 @@ body {
   text-align: center;
   position: relative;
   min-height: 100vh;
+  color: #eb892e;
 }
 
 h1 {
@@ -34,9 +35,7 @@ a {
   font-size: 1.375rem;
 }
 
-a {
-  color: #eb892e;
-}
+
 
 button {
   font-family: "Courgette", cursive;

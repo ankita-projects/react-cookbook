@@ -34,69 +34,76 @@ const RecipesForm = () => {
     setIngredients([...ingredients, newInc]);
   };
 
-  const submitData = (e) => {
-   
-  };
+  const submitData = (e) => {};
 
   return (
-    <Form onSubmit={submitData}>
-      <Form.Group>
-        <Form.Label htmlFor="">Name</Form.Label>
-        <Form.Control type="text" name="name" onChange={changeData} />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label htmlFor="">Description</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={3}
-          type="text"
-          name="desc"
-          onChange={changeData}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label htmlFor="">Image</Form.Label>
-        <Form.Control type="text" name="image" onChange={changeData} />
-      </Form.Group>
-      <p>Ingredients</p>
-      {ingredients.map((_, i) => {
-        return (
-          <div key={i}>
-            <Form.Group>
-              <Row>
-                <Col>
-                  <Form.Label htmlFor="">Quantity</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="quantity"
-                    onChange={(e) => changeIncData(e, i)}
-                  />
-                </Col>
-                <Col>
-                  <Form.Label htmlFor="">Ingredient</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="incName"
-                    onChange={(e) => changeIncData(e, i)}
-                  />
-                </Col>
-              </Row>
-            </Form.Group>
-          </div>
-        );
-      })}
 
-      <Button variant="outline-success" onClick={addMore}>
-        add more
-      </Button>
-      <Form.Group>
-        <Form.Label>Directions</Form.Label>
-        <Form.Control as="textarea" rows={3} name="dir" onChange={changeData} />
-      </Form.Group>
-      <Button type="submit" variant="success" value="Send data">
-        Post recipe
-      </Button>
-    </Form>
+      <Form onSubmit={submitData}>
+        <Form.Group>
+          <Form.Label htmlFor="">Name</Form.Label>
+          <Form.Control type="text" name="name" onChange={changeData} />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label htmlFor="">Description</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            type="text"
+            name="desc"
+            onChange={changeData}
+          />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label htmlFor="">Image</Form.Label>
+          <Form.Control type="text" name="image" onChange={changeData} />
+        </Form.Group>
+        <p>Ingredients</p>
+        {ingredients.map((_, i) => {
+          return (
+            <div key={i}>
+              <Form.Group>
+                <Row>
+                  <Col>
+                    <Form.Label htmlFor="">Quantity</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="quantity"
+                      onChange={(e) => changeIncData(e, i)}
+                    />
+                  </Col>
+                  <Col>
+                    <Form.Label htmlFor="">Ingredient</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="incName"
+                      onChange={(e) => changeIncData(e, i)}
+                    />
+                  </Col>
+                </Row>
+              </Form.Group>
+            </div>
+          );
+        })}
+
+        <Button variant="outline-success" onClick={addMore}>
+          add more
+        </Button>
+        <Form.Group>
+          <Form.Label>Directions</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            name="dir"
+            onChange={changeData}
+          />
+        </Form.Group>
+        <Button type="submit" variant="success" value="Send data">
+          Post recipe
+        </Button>
+      </Form>
+
+    
+  
   );
 };
 
