@@ -2,20 +2,20 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 
 
-const RecipesCard = ({ name, link, img, text, type }) => {
+const RecipesCard = ({key, name, img, desc, type,link }) => {
   const truncate = (str, no_words) => {
     return str.split(" ").splice(0, no_words).join(" ");
   };
   return (
    
-    <Card style={{ width: '18rem' }}>
+    <Card >
     <Card.Img variant="top" src={img} alt={name}/>
     <Card.Body>
       <Card.Title>{name}</Card.Title>
       <Card.Text>
-     
+      {truncate(desc, 30)}
       </Card.Text>
-      <Card.Link href="https://www.rasoimenu.com/recipe/balti-paneer-recipe/">Read more</Card.Link>
+      <Card.Link href={link}>Read more</Card.Link>
     </Card.Body>
     </Card>
   

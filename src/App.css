@@ -6,8 +6,11 @@
 body{
   background: rgb(2,0,36);
   width: 100%;
- 
-}
+ }
+ .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  }
 a {
   color: #eb892e;
 }
@@ -17,7 +20,11 @@ a:hover{
 .card{
   position: relative;
   margin:2rem;
-  height:500px;
+  width: 19rem;
+  height:auto;
+}
+.card-text{
+  color: #1f1818;
 }
 .card-img-top{
   position: relative;
@@ -26,6 +33,7 @@ a:hover{
 }
 .posts{
   display:flex;
+  flex-wrap: wrap;
 }
 header,
 footer{
@@ -33,5 +41,8 @@ footer{
   text-align: center;
   width: 100%;
   background-color:#1f1818;
+}
+.mt-5, .my-5 {
+  margin-top: 0rem!important;
 }
 

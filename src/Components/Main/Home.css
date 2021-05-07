@@ -1,21 +1,32 @@
-.container {
-    display: grid;
-    align-items: center;
-  }
-  
-  #search-bar {
-    width: 50%;
-    height: 3rem;
-    padding: 0 1rem;
-    font-size: initial;
-    text-align: center;
-    border-radius: 50px;
-  }
-  .background{
-    background-image: url("https://www.hoteliermiddleeast.com/public/images/2018/10/26/Khyber5.jpg");
-    background-repeat: no-repeat;
-    height:100%;
-    width: 150vw;
-    background-size: cover;
-    color: white;
-  }
+#search-bar {
+  margin-top: 2rem;
+  width: 1000px;
+  height: 3rem;
+  padding: 0 1rem;
+  font-size: initial;
+  padding-right: 2rem;
+  border-radius: 50px;
+  margin-left: 5rem;
+}
+h1{
+  margin: 0 auto;
+}
+.background {
+  background-image: url("https://www.hoteliermiddleeast.com/public/images/2018/10/26/Khyber5.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 150vw;
+  background-size: cover;
+  color: white;
+}
+label {
+  color: white;
+}
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+}
+.buttons {
+  margin-top: 2rem;
+  margin-left: 30rem;
+}

@@ -15,24 +15,21 @@ const Home = () => {
       });
   };
   return (
-    <div className="container background">
- 
+    <>
+      <div className="container background"></div>
+      <div className="heading">
+      <h1>
+        <label htmlFor="search-bar">A Fascinating Flavour Experience</label>
+      </h1>
       <form onSubmit={searchRecipe} method="get" id="search">
-     
-        
-      
-        <h1>
-          <label htmlFor="search-bar">A Fascinating Flavour Experience</label>
-        </h1>
-
         <input type="text" id="search-bar" name="searchQuery" />
         <div className="buttons">
           <button type="submit">Search Recipe</button>
         </div>
       </form>
-  
+      </div>
       <Recipes recipesList={recipes} />
-    </div>
+    </>
   );
 };
 
