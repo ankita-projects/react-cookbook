@@ -16,7 +16,8 @@ const Home = () => {
   };
   return (
     <>
-      <div className="container background"></div>
+      <div className ="backgroundImage"></div>
+      <div className="homeContainer">
       <div className="heading">
       <h1>
         <label htmlFor="search-bar">A Fascinating Flavour Experience</label>
@@ -28,7 +29,8 @@ const Home = () => {
         </div>
       </form>
       </div>
-      <Recipes recipesList={recipes} />
+      </div>
+      {/* <Recipes recipesList={recipes} /> */}
     </>
   );
 };

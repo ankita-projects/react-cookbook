@@ -3,18 +3,18 @@ import RecipesCard from "./RecipesCard";
 
 
 const Recipes = ({recipesList}) => {
-  
-  console.log(recipesList)
-
+  recipesList.map((a) => (console.log(a.id+'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+  ))
+        
   return (
     <div className="posts">
  
       {recipesList.map((a) => (
-        <RecipesCard
-          key={a.id}
+      <RecipesCard
+          id={a.id}
           name={a.name}
-          img={a.img}
-          desc={a.desc}
+          img={a.image}
+          desc={a.description}
           type={a.type}
           link={a.link}
         />

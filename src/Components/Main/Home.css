@@ -7,26 +7,43 @@
   padding-right: 2rem;
   border-radius: 50px;
   margin-left: 5rem;
+  
 }
 h1{
   margin: 0 auto;
 }
-.background {
+.homeContainer{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+.backgroundImage {
   background-image: url("https://www.hoteliermiddleeast.com/public/images/2018/10/26/Khyber5.jpg");
   background-repeat: no-repeat;
   height: 100%;
-  width: 150vw;
+  width: 100%;
+  position: absolute;
   background-size: cover;
   color: white;
+  z-index: -1;
 }
 label {
   color: white;
 }
 .heading {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .buttons {
   margin-top: 2rem;
   margin-left: 30rem;
+}
+.row{
+  margin-top: 0;
+  justify-content: center;
 }
