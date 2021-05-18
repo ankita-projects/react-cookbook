@@ -15,7 +15,7 @@ const RecipeSinglePage = () => {
   useEffect(() => {
     try {
       console.log("hello" + recipeId);
-      const url = `http://localhost:8000/recipe/find/${recipeId}`;
+      const url = `https://radiant-ravine-43439.herokuapp.com/recipe/find/${recipeId}`;
       const fecthRecipe = async (url) => {
         const res = await axios.get(url);
         const { data } = res;
