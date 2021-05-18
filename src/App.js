@@ -29,7 +29,6 @@ class App extends Component {
             <Footer />
           </Row>
         </Container>
-        
       </Router>
     );
   }
