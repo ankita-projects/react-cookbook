@@ -1,0 +1,45 @@
+.container.recipe {
+  max-width: 1200px;
+  margin-top: 4rem;
+}
+
+.ingredentsHeading{
+    text-align: center;
+}
+.recipe-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "a b"
+    "c c";
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.recipe-container > section {
+  padding: 2rem 3rem;
+}
+
+.ingredients-container {
+	grid-area: b;
+color: white;
+}
+
+.instructions-container {
+	grid-area: c;
+}
+
+.img-container {
+  min-height: 300px;
+  background-color: #02010150;
+  overflow: hidden;
+  grid-area: a;
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+.img-container img {
+  width: auto;
+  height: 100%;
+}

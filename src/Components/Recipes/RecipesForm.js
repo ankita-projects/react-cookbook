@@ -6,7 +6,7 @@ import axios from "axios";
 import Col from "react-bootstrap/Col";
 import history from "./../../history";
 
-const RecipesForm = (change, submit) => {
+const RecipesForm = () => {
   const [data, setData] = useState({
     name: "",
     difficulty: "Easy",
@@ -40,13 +40,14 @@ const RecipesForm = (change, submit) => {
   const submitRecipe = (e) => {
     e.preventDefault();
     axios
-      .post("http://127.0.0.1:8000/recipe/add", data)
+      .post("https://radiant-ravine-43439.herokuapp.com/recipe/add", data)
       .then(console.log("sdgfdfgdfhdfghdfhdf"));
 
     history.push("/recipes")
   };
 
   return (
+    <div className="mainContainer">
     <Form onSubmit={submitRecipe}>
       <Form.Group>
         <Form.Label htmlFor="">Name</Form.Label>
@@ -118,6 +119,7 @@ const RecipesForm = (change, submit) => {
         Post recipe
       </Button>
     </Form>
+    </div>
   );
 };
 
