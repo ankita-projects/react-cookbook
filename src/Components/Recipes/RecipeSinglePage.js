@@ -48,7 +48,6 @@ const RecipeSinglePage = () => {
             {recipe.ingredients.map((ingredient) => (
               <li key={ingredient.id}>
                 <ul>{ingredient.ingredientName}</ul>
-                <ul>{ingredient.quantity}</ul>
               </li>
             ))}
           </section>

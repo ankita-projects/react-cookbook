@@ -28,23 +28,40 @@ a {
 a:hover{
   color: #f1e3d5;
 }
+
 .card{
   position: relative;
-  margin:2rem;
-  width: 19rem;
-  height:auto;
+	display: inline-block;
+	max-width: 500px;
+	margin: 1rem 2rem;
+	padding: 2rem;
+	padding-top: 0;
+	padding-right: 0;
+
+
+	text-transform: capitalize;
+}
+.card-title,h5{
+  margin-top: 2rem;
+  font-weight: 800;
+  font-size: 25px;
 }
 .card-text{
   color: #1f1818;
+  max-width: 500px;
+ margin-top: 2rem;
 }
 .card-img-top{
   position: relative;
-  height: 250px;
-  top:2rem;
+  max-width: 500px;
+  height: 300px;
+  top:2.5rem;
+  right: 1rem;
 }
 .posts{
   display:flex;
   flex-wrap: wrap;
+  margin-top: 3rem;
 }
 header,
 footer{
@@ -59,11 +76,7 @@ footer{
 .btn-outline-success{
   margin-top: 1rem;
 }
-.recipeHeading{
-  text-align: center;
-  font-family:"Courgette", cursive;
-  margin: 1rem;
-}
+
 
 
 

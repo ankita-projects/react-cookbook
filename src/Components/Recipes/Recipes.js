@@ -37,9 +37,7 @@ const Recipes = ({ recipesList }) => {
   return (
     <React.Fragment>
       <Route path={path} exact>
-        <div className="recipeHeading">
-        <h2>Indian Cuisine</h2>
-        </div>
+     
         {renderedResult}
       </Route>
       <Route exact path={`${path}/:recipeId`}>
