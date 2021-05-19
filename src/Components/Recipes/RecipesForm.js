@@ -105,20 +105,20 @@ const RecipesForm = () => {
                     />
                   </Col>
                 </Row>
-                </Form.Group>
-                <Form.Group>
-                  <Button variant="outline-success" onClick={addMore}>
-                    add more
-                  </Button>
-                </Form.Group>
+              </Form.Group>
+              <Form.Group>
+                <Button variant="outline-success" onClick={addMore}>
+                  add more
+                </Button>
+              </Form.Group>
             </div>
           );
         })}
-        <Form.Group>
+        <div className="postRecipe">
           <Button type="submit" variant="success" value="Send data">
             Post recipe
           </Button>
-        </Form.Group>
+        </div>
       </Form>
     </div>
   );
