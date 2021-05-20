@@ -111,9 +111,11 @@ const RecipesForm = () => {
           );
         })}
         <div className="formButton">
+          <div className="addMore">
         <button variant="outline-success" onClick={addMore}>
-          add more
+          Add more
         </button>
+        </div>
         <div className="mydiv">
           <button type="submit" variant="success" value="Send data">
             Post recipe

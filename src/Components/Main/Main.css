@@ -63,6 +63,9 @@ p
 ¨ .bg-dark {
   background-color: black;
 }
+.addMore{
+  padding:1rem;
+}
 .formButton{
   display: flex;
   justify-content: space-between;
