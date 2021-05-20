@@ -8,7 +8,10 @@ const Home = () => {
   const searchRecipe = (e) => {
     e.preventDefault();
     let searchQuery = document.getElementById("search-bar").value;
-    fetch("https://radiant-ravine-43439.herokuapp.com/recipe/findbyname/" + searchQuery)
+    fetch(
+      "https://radiant-ravine-43439.herokuapp.com/recipe/findbyname/" +
+        searchQuery
+    )
       .then((response) => response.json())
       .then((data) => {
         setRecipes([data]);
@@ -29,7 +32,7 @@ const Home = () => {
             </div>
           </form>
         </div>
-        {recipes.length>0 ? <Recipes recipesList={recipes}/> :"" }
+        {recipes.length > 0 ? <Recipes recipesList={recipes} /> : ""}
       </div>
     </>
   );

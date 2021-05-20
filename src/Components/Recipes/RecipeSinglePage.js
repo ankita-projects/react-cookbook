@@ -7,8 +7,6 @@ import "./RecipePage.css";
 const RecipeSinglePage = () => {
   const { recipeId } = useParams();
 
-  const history = useHistory();
-
   const [recipe, setRecipe] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 

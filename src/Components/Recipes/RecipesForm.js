@@ -4,8 +4,6 @@ import Alert from "react-bootstrap/Alert";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
-import history from "./../../history";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RecipesForm = () => {
   const [showAlert, setShowAlert] = useState(false);
@@ -43,32 +41,33 @@ const RecipesForm = () => {
     e.preventDefault();
     axios
       .post("https://radiant-ravine-43439.herokuapp.com/recipe/add", data)
-      .then(() =>{
+      .then(() => {
         setShowAlert(true);
       });
-
-    history.push("/recipes");
   };
 
   return (
     <div className="mainContainer">
       {showAlert && (
-				<Alert
-					className='recipe-added-alert'
-					variant='success'
-					onClose={() => setShowAlert(false)}
-					dismissible
-				>
-					<Alert.Heading>New recipe added!</Alert.Heading>
-					<p>
-						Go to recipes, to see it or add another one.
-					</p>
-				</Alert>
-			)}
+        <Alert
+          className="recipe-added-alert"
+          variant="success"
+          onClose={() => setShowAlert(false)}
+          dismissible
+        >
+          <Alert.Heading>New recipe added!</Alert.Heading>
+          <p>Go to recipes, to see it or add another one.</p>
+        </Alert>
+      )}
       <Form onSubmit={submitRecipe}>
         <Form.Group>
           <Form.Label htmlFor="">Name</Form.Label>
-          <Form.Control required type="text" name="name" onChange={changeData} />
+          <Form.Control
+            required
+            type="text"
+            name="name"
+            onChange={changeData}
+          />
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="">Difficulty</Form.Label>
@@ -80,7 +79,7 @@ const RecipesForm = () => {
         <Form.Group>
           <Form.Label htmlFor="">Description</Form.Label>
           <Form.Control
-          required
+            required
             as="textarea"
             rows={3}
             type="text"
@@ -90,7 +89,12 @@ const RecipesForm = () => {
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="">Image</Form.Label>
-          <Form.Control required  type="text" name="image" onChange={changeData}  />
+          <Form.Control
+            required
+            type="text"
+            name="image"
+            onChange={changeData}
+          />
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="">Type</Form.Label>
@@ -129,15 +133,15 @@ const RecipesForm = () => {
         })}
         <div className="formButton">
           <div className="addMore">
-        <button variant="outline-success" onClick={addMore}>
-          Add more
-        </button>
-        </div>
-        <div className="mydiv">
-          <button type="submit" variant="success" value="Send data">
-            Post recipe
-          </button>
-        </div>
+            <button variant="outline-success" onClick={addMore}>
+              Add more
+            </button>
+          </div>
+          <div className="mydiv">
+            <button type="submit" variant="success" value="Send data">
+              Post recipe
+            </button>
+          </div>
         </div>
       </Form>
     </div>
