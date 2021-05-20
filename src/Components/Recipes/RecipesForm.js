@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
@@ -8,6 +8,7 @@ import history from "./../../history";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RecipesForm = () => {
+  const [showAlert, setShowAlert] = useState(false);
   const [data, setData] = useState({
     name: "",
     difficulty: "Easy",
@@ -42,17 +43,32 @@ const RecipesForm = () => {
     e.preventDefault();
     axios
       .post("https://radiant-ravine-43439.herokuapp.com/recipe/add", data)
-      .then(console.log("sdgfdfgdfhdfghdfhdf"));
+      .then(() =>{
+        setShowAlert(true);
+      });
 
     history.push("/recipes");
   };
 
   return (
     <div className="mainContainer">
+      {showAlert && (
+				<Alert
+					className='recipe-added-alert'
+					variant='success'
+					onClose={() => setShowAlert(false)}
+					dismissible
+				>
+					<Alert.Heading>New recipe added!</Alert.Heading>
+					<p>
+						Go to recipes, to see it or add another one.
+					</p>
+				</Alert>
+			)}
       <Form onSubmit={submitRecipe}>
         <Form.Group>
           <Form.Label htmlFor="">Name</Form.Label>
-          <Form.Control type="text" name="name" onChange={changeData} />
+          <Form.Control required type="text" name="name" onChange={changeData} />
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="">Difficulty</Form.Label>
@@ -64,6 +80,7 @@ const RecipesForm = () => {
         <Form.Group>
           <Form.Label htmlFor="">Description</Form.Label>
           <Form.Control
+          required
             as="textarea"
             rows={3}
             type="text"
@@ -73,7 +90,7 @@ const RecipesForm = () => {
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="">Image</Form.Label>
-          <Form.Control type="text" name="image" onChange={changeData} />
+          <Form.Control required  type="text" name="image" onChange={changeData}  />
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="">Type</Form.Label>

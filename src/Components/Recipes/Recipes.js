@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RecipesCard from "./RecipesCard";
 import { Route, useRouteMatch } from "react-router-dom";
 import RecipeSinglePage from "./RecipeSinglePage";
 
 
 const Recipes = ({ recipesList }) => {
+  const [recipesListRender, setRecipesListRender] = useState([]);
+  
+  useEffect(() => {
+    fetch("https://radiant-ravine-43439.herokuapp.com/recipe/all")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        setRecipesListRender(data);
+      });
+  }, []);
   const searchRecipe = (e) => {
     e.preventDefault();
     let searchQuery = document.getElementById("search-bar").value;
@@ -21,7 +31,7 @@ const Recipes = ({ recipesList }) => {
 
   const renderedResult = (
     <div className="posts">
-      {recipesList.map((a) => (
+      {recipesListRender.map((a) => (
         <RecipesCard
           id={a.id}
           name={a.name}
