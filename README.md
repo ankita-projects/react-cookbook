@@ -1,16 +1,19 @@
-# Getting Started with Create React App
+# Recipe App React JS Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo contains recipe app project which I did using React as frontend and PHP symfony framework as backend. Here is the link for live demo [Recipe App](https://60a67554025cdf4a85e74f6b--hungry-agnesi-67f305.netlify.app/)
 
-## Available Scripts
+## Technologies Used
+- React JS
+- Bootstrap
+- JS
+- HTML
+- CSS 
+- PHP
+- Symfony
 
-In the project directory, you can run:
+## Guided By
+- [GitHub](https://github.com/margittennosaar) @margittennosaar
+- [GitHub](https://github.com/phamt6) @phamt6
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
