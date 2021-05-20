@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
 import history from "./../../history";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RecipesForm = () => {
   const [data, setData] = useState({
@@ -106,17 +107,17 @@ const RecipesForm = () => {
                   </Col>
                 </Row>
               </Form.Group>
-              <Form.Group>
-                <Button variant="outline-success" onClick={addMore}>
-                  add more
-                </Button>
-              </Form.Group>
             </div>
           );
         })}
-        <Button type="submit" variant="success" value="Send data">
-          Post recipe
-        </Button>
+        <button variant="outline-success" onClick={addMore}>
+          add more
+        </button>
+        <div className="mydiv">
+          <button type="submit" variant="success" value="Send data">
+            Post recipe
+          </button>
+        </div>
       </Form>
     </div>
   );

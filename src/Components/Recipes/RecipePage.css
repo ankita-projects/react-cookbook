@@ -43,3 +43,9 @@ color: white;
   width: auto;
   height: 100%;
 }
+.mydiv{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem; 
+  flex-direction: row;
+}
