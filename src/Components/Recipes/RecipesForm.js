@@ -110,6 +110,7 @@ const RecipesForm = () => {
             </div>
           );
         })}
+        <div className="formButton">
         <button variant="outline-success" onClick={addMore}>
           add more
         </button>
@@ -117,6 +118,7 @@ const RecipesForm = () => {
           <button type="submit" variant="success" value="Send data">
             Post recipe
           </button>
+        </div>
         </div>
       </Form>
     </div>

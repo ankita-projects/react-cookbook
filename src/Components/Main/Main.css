@@ -63,3 +63,7 @@ p
 ¨ .bg-dark {
   background-color: black;
 }
+.formButton{
+  display: flex;
+  justify-content: space-between;
+}
