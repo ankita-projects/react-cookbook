@@ -37,7 +37,6 @@ const Recipes = ({ recipesList }) => {
   return (
     <React.Fragment>
       <Route path={path} exact>
-     
         {renderedResult}
       </Route>
       <Route exact path={`${path}/:recipeId`}>
