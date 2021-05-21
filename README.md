@@ -11,6 +11,15 @@ This repo contains recipe app project which I did using React as frontend and PH
 - PHP
 - Symfony
 
+Inside the project folder, run:
+
+```bash
+npm install
+npm install react-router-dom
+npm install json-server --save-dev
+npm install axios
+npm install react-bootstrap bootstrap
+
 ## Guided By
 - [GitHub](https://github.com/margittennosaar) @margittennosaar
 - [GitHub](https://github.com/phamt6) @phamt6
